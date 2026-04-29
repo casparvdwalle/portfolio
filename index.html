@@ -51,7 +51,7 @@
 
   /* HERO RIGHT - PHOTO */
   .hero-right { position: relative; overflow: hidden; background: var(--indigo-dark); display: flex; align-items: flex-end; }
-  .hero-photo { width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.9; display: block; }
+  .hero-photo { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; opacity: 0.9; display: block; }
   .hero-photo-overlay { position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to top, rgba(38,33,92,0.85), transparent); }
   .hero-photo-stats { position: absolute; bottom: 2.5rem; left: 2.5rem; right: 2.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .photo-stat { background: rgba(255,255,255,0.1); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 1.2rem 1.5rem; }
@@ -86,7 +86,7 @@
   .pillar-number { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 300; color: var(--indigo-pale); line-height: 1; margin-bottom: 0.8rem; }
   .pillar-title { font-size: 0.95rem; font-weight: 500; color: var(--indigo-dark); margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--border); }
   .pillar-items { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
-  .pillar-items li { font-size: 0.83rem; color: var(--muted); padding-left: 1rem; position: relative; line-height: 1.5; }
+  .pillar-items li { font-size: 0.83rem; color: var(--muted); padding-left: 1rem; position: relative; line-height: 1.6; margin-bottom: 0.6rem; } .pillar-items li strong { color: var(--indigo-dark); font-weight: 500; display: block; margin-bottom: 0.15rem; }
   .pillar-items li::before { content: '—'; position: absolute; left: 0; color: var(--indigo-light); font-size: 0.7rem; top: 0.1rem; }
 
   /* EXPERIENCE */
@@ -121,6 +121,34 @@
   footer { padding: 1.8rem 5rem; background: var(--indigo-dark); display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.06); }
   .footer-name { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 300; color: rgba(255,255,255,0.4); }
   .footer-right { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
+
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; flex-wrap: wrap; gap: 0.5rem; }
+    .nav-logo { font-size: 0.95rem; }
+    .nav-links { gap: 1rem; }
+    .nav-links a { font-size: 0.72rem; }
+
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { order: 2; padding: 2.5rem 1.5rem; }
+    .hero-right { order: 1; min-height: 65vw; max-height: 80vw; }
+    .hero-photo { object-position: center 10%; }
+    .hero-photo-stats { bottom: 1.2rem; left: 1.2rem; right: 1.2rem; gap: 0.7rem; }
+    .photo-stat { padding: 0.8rem 1rem; }
+    .photo-stat-num { font-size: 1.4rem; }
+
+    .role-section { padding: 3rem 1.5rem; }
+    .role-intro-block { grid-template-columns: 1fr; gap: 2rem; }
+    .pillars-grid { grid-template-columns: 1fr; }
+
+    .exp-section { padding: 3rem 1.5rem; }
+    .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    .exp-date-col { display: flex; align-items: center; gap: 0.8rem; }
+
+    .skills-section { grid-template-columns: 1fr; padding: 3rem 1.5rem; gap: 3rem; }
+
+    section { padding: 3rem 1.5rem; }
+    footer { padding: 1.5rem; }
+  }
 </style>
 </head>
 <body>
@@ -171,21 +199,21 @@
       <div class="role-badge"><span class="role-badge-dot"></span> Proposed new role</div>
       <div class="role-company-name">RoomPriceGenie</div>
       <div class="role-job-title">Revenue Operations &amp; AI Enablement Lead &middot; Barcelona</div>
-      <p class="role-description">RoomPriceGenie is the most intuitive revenue management solution for hoteliers — trusted by 4,000+ properties worldwide. This role focuses on scaling growth through smarter data, AI-powered workflows, and go-to-market efficiency. I will take ownership of operational AI execution, data quality, and market expansion support.</p>
+      <p class="role-description">RoomPriceGenie is the most intuitive revenue management solution for hoteliers — trusted by 4,000+ properties worldwide. This role focuses on scaling growth through cleaner data, smarter AI-powered workflows, and efficient go-to-market execution. I will take ownership of day-to-day AI execution, CRM quality, and market expansion support.</p>
     </div>
     <div class="role-right-block">
       <ul class="role-highlights">
         <li class="role-highlight-item">
           <div class="rh-icon">&#128202;</div>
-          <div class="rh-text"><strong>Data &amp; Revenue Operations</strong><span>Own commercial data quality, CRM governance, and enrichment workflows across the sales org.</span></div>
+          <div class="rh-text"><strong>Data &amp; Revenue Operations</strong><span>Own clean, structured sales data, CRM quality and adoption, and repeatable enrichment workflows across the sales org.</span></div>
         </li>
         <li class="role-highlight-item">
           <div class="rh-icon">&#129302;</div>
-          <div class="rh-text"><strong>AI Enablement</strong><span>Maximize AI tools across teams, automate repetitive workflows, and train staff on modern commercial processes.</span></div>
+          <div class="rh-text"><strong>AI, Automation &amp; Efficiency</strong><span>Embed AI tools into daily workflows, remove manual work through automation, and train teams on modern commercial processes.</span></div>
         </li>
         <li class="role-highlight-item">
           <div class="rh-icon">&#127758;</div>
-          <div class="rh-text"><strong>Growth &amp; Market Expansion</strong><span>Build scalable outbound systems and prepare account lists for new country launches.</span></div>
+          <div class="rh-text"><strong>Growth &amp; Market Expansion</strong><span>Build scalable outbound systems, support expansion into new regions, and improve cross-functional alignment.</span></div>
         </li>
       </ul>
     </div>
@@ -193,36 +221,42 @@
 
   <div class="pillars-label">The three pillars of the role</div>
   <div class="pillars-grid">
+
     <div class="pillar-card">
       <div class="pillar-number">01</div>
       <div class="pillar-title">Data &amp; Revenue Operations</div>
       <ul class="pillar-items">
-        <li>Improve commercial data quality and CRM structure</li>
-        <li>Build scalable enrichment processes for contacts and hotel insights</li>
-        <li>Optimize the sales tech stack and reduce inefficiencies</li>
-        <li>Support strategic internal projects with leadership</li>
+        <li><strong>Improve sales data accuracy</strong> — Be responsible for clean, structured sales data used by sales teams, including complete hotel records, correct contact details, and identification of relevant decision-makers.</li>
+        <li><strong>Build repeatable data enrichment workflows</strong> — Create repeatable workflows that continuously enrich the database with phone numbers, emails, ownership groups, and hotel insights.</li>
+        <li><strong>Optimize the sales tech stack</strong> — Review current tools and processes to spot duplicated tools, gaps, and inefficiencies, and opportunities to simplify the commercial operating environment.</li>
+        <li><strong>Increase CRM quality and adoption</strong> — Improve CRM structure and team usage, data fields are standardized, ownership is clear, and teams use systems consistently.</li>
+        <li><strong>Support strategic internal projects</strong> — Work closely with leadership on internal initiatives related to operations, systems, process improvement, and scalable growth infrastructure.</li>
       </ul>
     </div>
+
     <div class="pillar-card">
       <div class="pillar-number">02</div>
-      <div class="pillar-title">AI Enablement &amp; Workflow Efficiency</div>
+      <div class="pillar-title">AI, Automation &amp; Efficiency</div>
       <ul class="pillar-items">
-        <li>Maximize value of existing AI tools across commercial teams</li>
-        <li>Identify manual tasks and redesign through automation</li>
-        <li>Take ownership of AI execution from leadership</li>
-        <li>Train teams on modern AI workflows and best practices</li>
+        <li><strong>Ensure AI tools are used effectively</strong> — Ensure current AI solutions are fully embedded into daily workflows and create measurable value across the commercial organization.</li>
+        <li><strong>Remove manual work through automation</strong> — Identify repetitive manual tasks and redesign processes through automation, allowing teams to focus on higher-value commercial activities.</li>
+        <li><strong>Take over day-to-day AI execution from leadership</strong> — Manage day-to-day AI-related projects, implementation, testing, and workflow execution currently handled by Leon Pijpers, enabling stronger focus on strategic growth priorities.</li>
+        <li><strong>Improve internal usage and consistency</strong> — Help teams use tools consistently and effectively through clear workflows, guidance, and practical implementation.</li>
+        <li><strong>Train teams on modern commercial workflows</strong> — Support internal teams with training on AI usage, automation tools, prospecting methods, and more efficient ways of working.</li>
       </ul>
     </div>
+
     <div class="pillar-card">
       <div class="pillar-number">03</div>
       <div class="pillar-title">Growth &amp; Market Expansion</div>
       <ul class="pillar-items">
-        <li>Build scalable outbound workflows and targeting logic</li>
-        <li>Prepare account lists for new country launches</li>
-        <li>Improve cross-functional alignment across Sales, Marketing &amp; CS</li>
-        <li>Build a scalable growth engine with stronger data</li>
+        <li><strong>Strengthen outbound workflows</strong> — Build scalable outreach systems, including sequences, targeting logic, and structured workflows that support growth.</li>
+        <li><strong>Support expansion into new regions</strong> — Prepare account lists, enrich local data, identify decision-makers, and build launch-ready outreach workflows for new countries or regions.</li>
+        <li><strong>Improve cross-functional alignment</strong> — Strengthen collaboration between Sales, Marketing, and Customer Success by improving handovers, shared processes, lifecycle stages, and internal communication.</li>
+        <li><strong>Build systems that support faster growth</strong> — Help RoomPriceGenie grow faster through stronger data, smarter systems, and more efficient go-to-market execution.</li>
       </ul>
     </div>
+
   </div>
 </section>
 
